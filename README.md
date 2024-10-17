@@ -10,5 +10,5 @@
     plot_the_iNKP_D16_D20.R
     plot_pseudotime_the_iNKP_D16_D20.R
 
-## Analysis of PSC-derived iNK isolated from different tissue of CD19CAR-R4iNKP recipients
+## Analysis of PSC-derived iNK isolated from different tissue of iNKP recipients
   04_analysis_iNKP_derived_iNK_invivo.R
