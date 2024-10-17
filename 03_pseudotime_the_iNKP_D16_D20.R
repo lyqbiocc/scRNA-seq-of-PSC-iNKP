@@ -1,8 +1,15 @@
 # pesudo-times analysis  
-
-#library("sf",lib.loc="/public/home/lin_yunqing/.conda/envs/RNAseq/lib/R/library")
+## library packages
+library(dplyr)
+library(Seurat)
+library(patchwork)
+library(viridis)
+library(ggplot2)
+library(magrittr)
+library(pheatmap)
+library(clusterProfiler)
+library(cowplot) #combine plots
 library("monocle3",lib.loc="/public/home/lin_yunqing/.conda/envs/RNAseq/lib/R/library")
-
 
 ## obtain data to create cds object [expression: lognormalization of UMIs]  
 CD45_CD34_imNK=readrds("./CD45_CD34_imNK.rds")
@@ -17,9 +24,7 @@ CD45_CD34_imNK.cds <- new_cell_data_set(CD45_CD34_imNK.counts,
 
 rm(CD45_CD34_imNK.meta,CD45_CD34_imNK.gene,CD45_CD34_imNK.counts)
 gc()
-
 ## normalization/scale/pca/umap in monocle  
-
 ## use "data"[lognormalization of UMIs] of seurat object, and not re-normalize and sclale data
 CD45_CD34_imNK.cds <- preprocess_cds(CD45_CD34_imNK.cds,
                                   #residual_model_formula_str = "~ nFeature_RNA + nCount_RNA",
@@ -38,21 +43,12 @@ CD45_CD34_imNK.cds <- reduce_dimension(CD45_CD34_imNK.cds,preprocess_method = "P
                                     max_components = 2)
 
 ## load UMAP result into CDS object  
-
-##从seurat导入整合过的umap坐标
-#cds.embed <- CD45_CD34_imNK.cds@int_colData$reducedDims$UMAP
-#int.embed <- Embeddings(CD45_CD34_imNK, reduction = "umap")
-#int.embed <- int.embed[rownames(cds.embed),]
-
 cds.embed <- CD45_CD34_imNK.cds@int_colData$reducedDims$UMAP
 int.embed <- Embeddings(pb.integrated, reduction = "umap")
 int.embed <- int.embed[rownames(cds.embed),]
-
 CD45_CD34_imNK.cds@int_colData$reducedDims$UMAP <- int.embed
 
-
 ## clusteringr in monocle  
-
 CD45_CD34_imNK.cds <- cluster_cells(CD45_CD34_imNK.cds,resolution=0.0001,k=50,cluster_method = c("louvain"))#resolution=0.0001
 unique(partitions(CD45_CD34_imNK.cds))
 #plot_cells(CD45_CD34_imNK.cds, color_cells_by = "partition",group_cells_by="partition")
@@ -61,10 +57,7 @@ plot_cells(CD45_CD34_imNK.cds, color_cells_by = "cluster",group_label_size = 3)
 table(colData(CD45_CD34_imNK.cds)$anno_6)
 table(CD45_CD34_imNK.cds@clusters$UMAP$clusters)
 
-
-## 利用learn graph在每个partition中寻找主路径 => learn_graph()  
-
-#plot_cells(CD45_CD34_imNK.cds, color_cells_by = "partition")
+## search pseudotime trajectory
 CD45_CD34_imNK.cds <- learn_graph(CD45_CD34_imNK.cds, 
                                use_partition = F,
                                close_loop = F,
@@ -78,7 +71,6 @@ plot_cells(CD45_CD34_imNK.cds,
 
 
 ## oder cells to search root => order_cells()    
-
 p=FeaturePlot(pb.integrated,features = c("PTPRC","AVP","ANGPT1","SPINK2","IGLL1","GATA1","GATA2","SPI1","CD34","MECON","HLF","HOXA9","HOXA10"),ncol = 7,pt.size = 0.01,cols = c("lightgrey","red"))&theme_bw() &
   theme(
     axis.text.x=element_text(colour="black",size=8),
@@ -94,11 +86,8 @@ p=FeaturePlot(pb.integrated,features = c("PTPRC","AVP","ANGPT1","SPINK2","IGLL1"
     plot.title = element_text(face="italic",hjust = 0.5,size=10),legend.position = "bottom")&
   #scale_color_manual(values = c(colors[c(1:15)]))&
   guides(color = guide_legend(nrow = 1, byrow = T, override.aes = list(size = 1)))
-p
-#ggsave(p,filename = "./Q338_10X_iNK_/UMAP_exp_lanscap_1013.pdf",width = 21,height = 9)
 
 ### manully selection of root via HSC-related gene expression
-
 CD45_CD34_imNK.cds <- order_cells(CD45_CD34_imNK.cds)
 CD45_CD34_imNK.cds@principal_graph_aux@listData$UMAP$root_pr_nodes
 
