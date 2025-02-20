@@ -1,4 +1,4 @@
-Title: Dual preventions of tumor occurrence and relapse via pluripotent stem cell-derived NK progenitor cell therapy 
+Title: Dual preventions of tumor occurrence and relapse via pluripotent stem cell-derived NK progenitor cell therapy  
 https://www.biorxiv.org/content/10.1101/2025.01.07.631650v1  
 Summary:  
 Raw data of scRNA-seq can be downloaded and processed by CellRanger software package (version 7.0.1, https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/installation), then aggregated by the ‘aggr’ function of the CellRanger package and subjected to Seurat (version 4.2.0) for further analysis.  
