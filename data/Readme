@@ -1,3 +1,3 @@
 Processed data and metadata of seurat object for scRNA-seq analysis.
 meta_subsets_D16_D20_anno3.txt: the metadata of "subsets_D16_D20_anno3.rds"
-meta_CD45_CD34_imNK_1012.txt: the metadata of "CD45_CD34_imNK_1012.RDS"
+meta_CD45_CD34_imNK_1012.txt: the metadata of "CD45_CD34_imNK_1013.rds"
