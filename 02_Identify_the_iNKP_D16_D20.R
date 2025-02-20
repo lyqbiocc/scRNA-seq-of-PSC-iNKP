@@ -68,7 +68,7 @@ CD45_CD34_imNK$anno_3=as.vector(Idents(CD45_CD34_imNK))
 meta=as.data.frame(CD45_CD34_imNK@meta.data[,c("times","RNA_snn_res.0.6","anno_1","anno_2","anno_3")])
 meta$cellID=rownames(CD45_CD34_imNK@meta.data)
 write.table(meta,file = "./meta_CD45_CD34_imNK.txt",sep="\t",row.names=T,col.names = T)
-saveRDS(CD45_CD34_imNK,file="./CD45_CD34_imNK_1012.RDS")
+saveRDS(CD45_CD34_imNK,file="./CD45_CD34_imNK_1016.rds")
 
 ## mapping with natural NKP and NK cells  
 ### load natural cells gene expression (STRT-seq)
