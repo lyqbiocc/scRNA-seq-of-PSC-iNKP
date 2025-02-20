@@ -1,6 +1,6 @@
 # pseudo-time plot  
 ##
-CD45_CD34_imNK.cds=readRDS("./CD45_CD34_imNK.rds")
+CD45_CD34_imNK.cds=readRDS("./pesud_CD45_CD34_imNK_1013.rds")
 p=plot_cells(CD45_CD34_imNK.cds,cell_size = 0.5,
              color_cells_by = "anno_6_f",
              label_cell_groups=FALSE,
