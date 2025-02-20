@@ -91,5 +91,5 @@ p=FeaturePlot(pb.integrated,features = c("PTPRC","AVP","ANGPT1","SPINK2","IGLL1"
 CD45_CD34_imNK.cds <- order_cells(CD45_CD34_imNK.cds)
 CD45_CD34_imNK.cds@principal_graph_aux@listData$UMAP$root_pr_nodes
 
-saveRDS(CD45_CD34_imNK.cds,file = "./D16_D20_res/pesud_CD45_CD34_imNK_1013.rds")
+saveRDS(CD45_CD34_imNK.cds,file = "./pesud_CD45_CD34_imNK_1013.rds")
 
