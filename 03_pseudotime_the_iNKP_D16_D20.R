@@ -92,4 +92,5 @@ CD45_CD34_imNK.cds <- order_cells(CD45_CD34_imNK.cds)
 CD45_CD34_imNK.cds@principal_graph_aux@listData$UMAP$root_pr_nodes
 
 saveRDS(CD45_CD34_imNK.cds,file = "./pesud_CD45_CD34_imNK_1013.rds")
-
+#The code for plotting pseudo-time of iNKP lineage cells:
+## plot pseudotime_the_iNKP_D16_D20.R
