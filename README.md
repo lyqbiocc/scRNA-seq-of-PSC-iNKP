@@ -1,5 +1,9 @@
-Title: Pluripotent stem cell-derived NK progenitor cell therapy prevents tumour occurrence and eradicates minimal residual disease
-https://www.biorxiv.org/content/10.1101/2025.01.07.631650v1
+Title: Pluripotent stem cell-derived NK progenitor cell therapy prevents tumour occurrence and eradicates minimal residual disease  
+https://www.biorxiv.org/content/10.1101/2025.01.07.631650v1  
+Summary:  
+Raw data of scRNA-seq can be downloaded and processed by CellRanger software package (version 7.0.1, https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/installation), then aggregated by the ‘aggr’ function of the CellRanger package and subjected to Seurat (version 4.2.0) for further analysis.  
+Raw data of scRNA-seq:  
+The scRNA-seq data of UCB_resting NK cells, PSC-derived cells from day 16-20 organoids, and CD19CAR-R4iNK cells from PB, BM, Liver, Lung, and Spleen have been deposited in the Genome Sequence Archive public database (HRA008662). The scRNA-seq data of natural NKP and NK are from the Gene Expression Omnibus database (GSE149938). The accession number scRNA-seq data of UCB_activated NK is HRA007978. The accession number scRNA-seq data of PSC-iNK, PB_resting NK cells, and PB_activated cells is HRA001609.  
 
 # scRNA seq analysis of hPSC derived iNKP and iNK cells
 
