@@ -110,4 +110,5 @@ pb.integrated <- RunPCA(pb.integrated, verbose = FALSE)
 ElbowPlot(pb.integrated,ndims = 30)
 pb.integrated <- RunUMAP(pb.integrated, dims = 1:25,n.neighbors = 30)
 
-
+# the code for plotting the projection among natural NKP cells, Day 16 to Day 20 iNKP-lineage cells:  
+## plot_the_iNKP_D16_D20.R
