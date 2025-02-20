@@ -12,7 +12,7 @@ library(cowplot) #combine plots
 library("monocle3",lib.loc="/public/home/lin_yunqing/.conda/envs/RNAseq/lib/R/library")
 
 ## obtain data to create cds object [expression: lognormalization of UMIs]  
-CD45_CD34_imNK=readrds("./CD45_CD34_imNK.rds")
+CD45_CD34_imNK=readrds("./CD45_CD34_imNK_1012.RDS")
 CD45_CD34_imNK.meta <- CD45_CD34_imNK@meta.data
 CD45_CD34_imNK.gene <- data.frame(gene_short_name = rownames(CD45_CD34_imNK), row.names = rownames(CD45_CD34_imNK))
 CD45_CD34_imNK.counts <- GetAssayData(CD45_CD34_imNK, slot = "data") %>% as.matrix #matrix is required
