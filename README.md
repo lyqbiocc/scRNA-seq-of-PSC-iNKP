@@ -1,3 +1,6 @@
+Title: Pluripotent stem cell-derived NK progenitor cell therapy prevents tumour occurrence and eradicates minimal residual disease
+https://www.biorxiv.org/content/10.1101/2025.01.07.631650v1
+
 # scRNA-seq-analysis-of-PSC-iNKP-and-cells
 
 ## Analysis of all the GFP- cells of the PSC-derived organoids from days 16, 17, 18, 19 and 20
