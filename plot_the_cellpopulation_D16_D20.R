@@ -1,6 +1,6 @@
 # D16-D20 PSC-derived cells analysis  
 ## plot the cell population from D16-D20 PSC-derived cells
-#D16_D20.seu=readRDS("./subsets_D16_D20_anno3.rds")
+D16_D20.seu=readRDS("./subsets_D16_D20_anno3.rds")
 D16_D20.seu$anno_2_f=factor(D16_D20.seu$anno_2,levels = c("iStroma","iEndo","Hematopoietic_progenitor","iMkE","iMyeloid","iNK lineage"))
 p=DimPlot(D16_D20.seu,pt.size = 0.001,raster = F,group.by = c("anno_2_f"),label = F,label.size = 0,ncol = 1)+scale_fill_brewer(palette = "Dark2")+labs(title="")&theme(
   axis.text.x=element_text(colour="black",size=8),
