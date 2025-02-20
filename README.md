@@ -3,7 +3,7 @@ https://www.biorxiv.org/content/10.1101/2025.01.07.631650v1
 
 # scRNA seq analysis of hPSC derived iNKP and iNK cells
 
-## Analysis of all the GFP- cells of the hPSC-derived organoids from day 16, 17, 18, 19 and 20
+## Analysis of all the GFP negative cells of the hPSC-derived organoids from day 16, 17, 18, 19 and 20
     01_Identify_the_cellpopulation_D16_D20.R
     plot_the_cellpopulation_D16_D20.R
 
