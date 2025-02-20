@@ -103,7 +103,8 @@ meta=as.data.frame(D16_D20.seu@meta.data[,c("times","RNA_snn_res.0.3","anno_1","
 meta$cellID=rownames(D16_D20.seu@meta.data)
 write.table(meta,file = "./meta_subsets_D16_D20_anno3.txt",sep="\t",row.names=T,col.names = T)
 
-
+#  the code for plotting the Day 16 to Day 20 cells:
+## plot_the_cellpopulation_D16_D20.R
 
 
 
