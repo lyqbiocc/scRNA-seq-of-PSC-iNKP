@@ -64,6 +64,12 @@ CD45_CD34_imNK=RenameIdents(CD45_CD34_imNK,
                             "5"="other-iHPC","7"="other-iHPC","8"="other-iHPC","9"="other-iHPC","10"="other-iHPC","11"="other-iHPC")
 
 CD45_CD34_imNK$anno_3=as.vector(Idents(CD45_CD34_imNK))
+### output the meta and seura object files
+meta=as.data.frame(CD45_CD34_imNK@meta.data[,c("times","RNA_snn_res.0.6","anno_1","anno_2","anno_3")])
+meta$cellID=rownames(CD45_CD34_imNK@meta.data)
+write.table(meta,file = "./meta_CD45_CD34_imNK.txt",sep="\t",row.names=T,col.names = T)
+saveRDS(CD45_CD34_imNK,file="./CD45_CD34_imNK_1012.RDS")
+
 ## mapping with natural NKP and NK cells  
 ### load natural cells gene expression (STRT-seq)
 natural_immcell=read.delim("./GSE149938_umi_matrix.csv",sep=",",header = T)
