@@ -98,7 +98,10 @@ D16_D20.seu$anno_2=as.vector(Idents(D16_D20.seu))
 D16_D20.seu$anno_3=D16_D20.seu$anno_2
 saveRDS(D16_D20.seu,file="./subsets_D16_D20_anno3.rds")
 
-
+# output the main meta information of D16_D20.seu
+meta=as.data.frame(D16_D20.seu@meta.data[,c("times","RNA_snn_res.0.3","anno_1","anno_2","anno_3")])
+meta$cellID=rownames(D16_D20.seu@meta.data)
+write.table(meta,file = "./meta_subsets_D16_D20_anno3.txt",sep="\t",row.names=T,col.names = T)
 
 
 
