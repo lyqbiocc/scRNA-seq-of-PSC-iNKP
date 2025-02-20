@@ -95,7 +95,8 @@ D16_D20.seu=RenameIdents(D16_D20.seu,
                          "0"="iMyeloid","4"="iMyeloid","5"="iMyeloid","8"="iMyeloid","10"="iMyeloid")
 
 D16_D20.seu$anno_2=as.vector(Idents(D16_D20.seu))
-
+D16_D20.seu$anno_3=D16_D20.seu$anno_2
+saveRDS(D16_D20.seu,file="./subsets_D16_D20_anno3.rds")
 
 
 
