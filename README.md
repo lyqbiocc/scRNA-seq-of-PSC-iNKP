@@ -25,3 +25,7 @@ The scRNA-seq data of UCB_resting NK cells, PSC-derived cells from day 16-20 org
     Figure 2L-N
     04_analysis_iNKP_derived_iNK_invivo.R
     05_correlation_analysis.R
+
+## Analysis of hPSC-derived iNK isolated from different tissue of iNKP recipients
+    Figure S8B-C
+    06_mapping_natural_ILC_NK.R
