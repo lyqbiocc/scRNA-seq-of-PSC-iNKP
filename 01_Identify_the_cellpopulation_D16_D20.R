@@ -80,7 +80,7 @@ colors= c('#00f000','#0000f0','#b30000','#f0f000',
           '#b3de69','#fccde5','#bc80bd','#ccebc5',
           '#ffed6f','#64b267','#47a7bd','#f36621',
           '#31629d','#9fde00','#ffbe2a','#ec008c','#ff7404')
-
+## Figure S1B: (B) UMAP visualization of the feature genes expressed in iStroma, iEndo, iHPC, iMkE, iMyeloid, and iNK lineage cells.
 p=VlnPlot(D16_D20.seu,features = c("PDGFRA","COL1A2", "CDH5","ECSCR","NR2F2", "PTPRC","CD34","ANGPT1","MEIS1","MECOM","SPINK2", "ITGA2B", "GATA1","GATA2","KLF1","CPA3","CEBPE","CEACAM8","CD68","C1QA","IGLL1", "IL2RB","ITGB7","KIT","IL7R","NKG7","CD38","CD7","MME","IL3RA","IFITM1","KLRC3","KLRD1","TBX21","NCAM1","GNLY"),group.by = "RNA_snn_res.0.3",pt.size = 0,ncol = 8)&scale_fill_manual(values = colors)&theme(axis.text.x = element_text(size = 12))
 p
 
@@ -105,6 +105,7 @@ write.table(meta,file = "./meta_subsets_D16_D20_anno3.txt",sep="\t",row.names=T,
 
 #  the code for plotting the Day 16 to Day 20 cells:
 ## plot_the_cellpopulation_D16_D20.R
+
 
 
 
