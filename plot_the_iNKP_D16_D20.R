@@ -1,3 +1,4 @@
+# Figure 1B: (B) UMAP illustrating the projection of NKP, NK with e-iNKP, l-iNKP, and im-iNK. NKP, natural NK progenitor cells, NK, natural NK cells, other-iHPC, other induced hematopoietic cells. e-iNKP, early iNK progenitor cells. l-iNKP, late iNK progenitor cells. im-iNK, immature iNK cells. 
 # visualization, clustering
 pb.integrated=readRDS("./iNKP_NKP_mapping.rds")
 plots <- DimPlot(pb.integrated, split.by = c("group"),label = T)
@@ -51,5 +52,6 @@ p=DimPlot(pb.integrated, group.by  = c("group1"),label = F,split.by = "times",nc
   guides(color = guide_legend(nrow = 1, byrow = T, override.aes = list(size = 3)))
 p
 #ggsave(p,filename = "./D16_D20_res/iNKP_nkp_UMAP.pdf",width = 12,height = 3)
+
 
 
