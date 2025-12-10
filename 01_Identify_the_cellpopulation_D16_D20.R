@@ -1,5 +1,5 @@
 # scRNA-seq of D16-D20 PSC-derived cells
-
+## Figure supplementary 1 A-B
 # library packages
 
 library(ggplot2)
@@ -105,6 +105,7 @@ write.table(meta,file = "./meta_subsets_D16_D20_anno3.txt",sep="\t",row.names=T,
 
 #  the code for plotting the Day 16 to Day 20 cells:
 ## plot_the_cellpopulation_D16_D20.R
+
 
 
 
