@@ -1,5 +1,7 @@
 # D16-D20 PSC-derived cells analysis  
 ## plot the cell population from D16-D20 PSC-derived cells
+## Figure S1A:(A) UMAP clustering of all the GFPcells of the organoids from days 16, 17, 18, 19, and 20. 
+## iStroma, induced Stroma cells. iEndo, induced Endothelial cells. iHPC, induced Hematopoietic progenitor cells. iMkE, induced Megakaryocytic–Erythroid cells, iMyeloid, induced Myeloid cells, iNK lineage cells, induced iNK progenitor cells and iNK cells.
 D16_D20.seu=readRDS("./subsets_D16_D20_anno3.rds")
 D16_D20.seu$anno_2_f=factor(D16_D20.seu$anno_2,levels = c("iStroma","iEndo","Hematopoietic_progenitor","iMkE","iMyeloid","iNK lineage"))
 p=DimPlot(D16_D20.seu,pt.size = 0.001,raster = F,group.by = c("anno_2_f"),label = F,label.size = 0,ncol = 1)+scale_fill_brewer(palette = "Dark2")+labs(title="")&theme(
@@ -23,6 +25,7 @@ p
 #ggsave(p,filename = "./D16_D20_res/UMAP_lanscap.pdf",width = 5,height = 5)
 
 ## plot the lineage-gene expression from D16-D20 PSC-derived cells
+## Figure S1B: (B) UMAP visualization of the feature genes expressed in iStroma, iEndo, iHPC, iMkE, iMyeloid, and iNK lineage cells.
 p=FeaturePlot(D16_D20.seu,features = c("PTPRC","PDGFRA","CDH5","ANGPT1","SPINK2","IGLL1","GATA1","PF4","GATA2","CPA3","SPI1","MPO","CLEC4A","CD34","CD38","CD7","NKG7","IL2RB","GNLY"),ncol = 7,pt.size = 0.01,cols = c("lightgrey","red"))&theme_bw() &
   theme(
     axis.text.x=element_text(colour="black",size=8),
@@ -40,3 +43,4 @@ p=FeaturePlot(D16_D20.seu,features = c("PTPRC","PDGFRA","CDH5","ANGPT1","SPINK2"
   guides(color = guide_legend(nrow = 1, byrow = T, override.aes = list(size = 1)))
 p
 #ggsave(p,filename = "./D16_D20_res/UMAP_exp.pdf",width = 21,height = 9)
+
