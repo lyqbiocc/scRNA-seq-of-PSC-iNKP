@@ -1,3 +1,4 @@
+# Figure 2M: (M) Heatmap showing the correlation value between each two populations in whole transcriptome levels. The pearson correlation coefficient presenting in each dot was encoded by color and calculated by the ‘cor’ function using the average expression of the total transcriptome profile.
 # library packages
 library(ggplot2)
 #library(ggrepel)
@@ -33,3 +34,4 @@ p=corrplot(cor_value,col = color_1,addCoef.col = "black",is.corr = F,col.lim = c
 p
 #corHybridPlot <- recordPlot()
 #dev.off()
+
