@@ -13,6 +13,7 @@ pb.integrated$group1[rownames(NK_cells@meta.data)]=NK_cells$group1
 pb.integrated$group1[rownames(CD45_CD34_imNK@meta.data)]=CD45_CD34_imNK$anno_3
 pb.integrated$group1=factor(pb.integrated$group1,levels = c("other-iHPC","NKP", "NK","e-iNKP","l-iNKP","im-iNK"))
 
+## Figure 1B-D: (B) UMAP illustrating the projection of NKP, NK with e-iNKP, l-iNKP, and im-iNK. NKP, natural NK progenitor cells, NK, natural NK cells, other-iHPC, other induced hematopoietic cells. e-iNKP, early iNK progenitor cells. l-iNKP, late iNK progenitor cells. im-iNK, immature iNK cells. 
 p=DimPlot(pb.integrated, group.by  = c("group1"),label = F)&scale_color_manual(values =c( "lightgrey",RColorBrewer::brewer.pal(9,"Set1")[c(3,2,5,4,8)]))&labs(title="")&theme_bw() &
   theme(
     axis.text.x=element_text(colour="black",size=8,face="bold"),
@@ -50,3 +51,4 @@ p=DimPlot(pb.integrated, group.by  = c("group1"),label = F,split.by = "times",nc
   guides(color = guide_legend(nrow = 1, byrow = T, override.aes = list(size = 3)))
 p
 #ggsave(p,filename = "./D16_D20_res/iNKP_nkp_UMAP.pdf",width = 12,height = 3)
+
