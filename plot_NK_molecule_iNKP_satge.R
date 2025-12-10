@@ -31,11 +31,13 @@ iNKP=subset(CD45_CD34_imNK,subset=group=="iNKP")
 rm(CD45_CD34_imNK)
 gc()
 
-##merge data  
+## merge data  
 integ=merge(x=UCB_aNK,
                    y=c(NormalizeData(PSC_iNK,normalization.method = "LogNormalize", scale.factor =median(PSC_iNK$nCount_RNA)),
                        NormalizeData(iNKP,normalization.method = "LogNormalize", scale.factor =median(iNKP$nCount_RNA))
 )
+P=VlnPlot(integ, group.by = "group",features = c("NCAM1", "FCGR3A","GZMB","GZMA","PRF1","TNFSF10","FAS","FASLG"), ncol = 4,pt.size = 0,raster = F)&labs(x="")
+
 
 
 
