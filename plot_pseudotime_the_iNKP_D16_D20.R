@@ -1,5 +1,5 @@
 # pseudo-time plot  
-##
+## Figure 1C:  (C) pseudo-time analysis of other-iHPC, e-iNKP, l-iNKP, and im-iNK. 
 CD45_CD34_imNK.cds=readRDS("./pesud_CD45_CD34_imNK_1013.rds")
 p=plot_cells(CD45_CD34_imNK.cds,cell_size = 0.5,
              color_cells_by = "anno_6_f",
@@ -21,3 +21,4 @@ p=plot_cells(CD45_CD34_imNK.cds,cell_size = 0.5,
         legend.spacing.y = unit(0.1, "cm"))#+scale_x_continuous(limits = c(-8,8),breaks = c(-8,-4,0,4,8))+scale_y_continuous(limits = c(-5,6),breaks=c(-5,-2.5,0,3,6))
 p
 #ggsave(p,filename = "./D16_D20_res/pesudo-time_iNKP.pdf",width = 4.5,height = 3)
+
