@@ -103,8 +103,11 @@ meta=as.data.frame(D16_D20.seu@meta.data[,c("times","RNA_snn_res.0.3","anno_1","
 meta$cellID=rownames(D16_D20.seu@meta.data)
 write.table(meta,file = "./meta_subsets_D16_D20_anno3.txt",sep="\t",row.names=T,col.names = T)
 
-#  the code for plotting the Day 16 to Day 20 cells:
+#  the code for plotting the Day 16 to Day 20 cells
+## Figure S1A:(A) UMAP clustering of all the GFPcells of the organoids from days 16, 17, 18, 19, and 20. 
+## iStroma, induced Stroma cells. iEndo, induced Endothelial cells. iHPC, induced Hematopoietic progenitor cells. iMkE, induced Megakaryocytic–Erythroid cells, iMyeloid, induced Myeloid cells, iNK lineage cells, induced iNK progenitor cells and iNK cells.
 ## plot_the_cellpopulation_D16_D20.R
+
 
 
 
