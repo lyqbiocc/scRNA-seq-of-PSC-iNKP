@@ -1,5 +1,6 @@
 # expression of CXCR4  
-
+## Figure 1I-J:(I) Boxplots showing the expression levels of endogenous CXCR4 in NKP and BM_NK cells at the transcriptome level. STRT-seq data from GSE149938 were analysed. 
+## (J) Boxplots showing the expression levels of endogenous CXCR4 in UCB_NK, PB_NK, iNKP, and iNK populations. Droplet-based scRNA-seq data from HRA007978 (UCB_NK) and HRA001609 (PB_NK, iNK) were analysed.
 ## expression of CXCR4 of iNKP and iNK (invitro)
 
 ### load rds 
@@ -56,4 +57,5 @@ box_p1=ggplot(data4boxplot, aes(x = variable, y = value)) +
   theme_bw() + 
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), strip.text = element_text(face="italic",size = 8) , legend.position = "bottom",axis.title.x = element_blank(),axis.text.x = element_blank())+labs(x="",y="")+scale_fill_manual(values =colors[20:24])
 #box_p=box_p+theme(legend.position = "bottom",legend.title = element_blank())
+
 box_p1
