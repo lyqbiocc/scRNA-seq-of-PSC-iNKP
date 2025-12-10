@@ -1,4 +1,5 @@
 #subset Hematopoietic_progenitor and iNK lineage cells to second-analysis  
+## Figure 1B-D  
 ## library packages
 library(dplyr)
 library(Seurat)
@@ -111,4 +112,8 @@ ElbowPlot(pb.integrated,ndims = 30)
 pb.integrated <- RunUMAP(pb.integrated, dims = 1:25,n.neighbors = 30)
 saveRDS(pb.integrated,file="./iNKP_NKP_mapping.rds")
 # the code for plotting the projection among natural NKP cells, Day 16 to Day 20 iNKP-lineage cells:  
+## Figure 1B-D: (B) UMAP illustrating the projection of NKP, NK with e-iNKP, l-iNKP, and im-iNK. NKP, natural NK progenitor cells, NK, natural NK cells, other-iHPC, other induced hematopoietic cells. e-iNKP, early iNK progenitor cells. l-iNKP, late iNK progenitor cells. im-iNK, immature iNK cells. 
+## (C) pseudo-time analysis of other-iHPC, e-iNKP, l-iNKP, and im-iNK. 
+## (D) Violin plots of gene expression levels of CD34, CD38, CD7, CD123-encoding IL3RA, CD127-encoding IL7R, CD10-encoding MME, CD56-encoding NCAM1, and CD16-encoding FCGR3A in other-iHPC, iNKP (e-iNKP and l-iNKP) and im-iNK. 
 ## plot_the_iNKP_D16_D20.R
+
