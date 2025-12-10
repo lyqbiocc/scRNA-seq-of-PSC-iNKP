@@ -13,11 +13,12 @@ The scRNA-seq data of UCB_resting NK cells, PSC-derived cells from day 16-20 org
     plot_the_cellpopulation_D16_D20.R
 
 ## Locate the iNKP-like cells and identify iNK lineage cells 
-    Figure 1B-C
+    Figure 1B-D
     02_Identify_the_iNKP_D16_D20.R
     03_pseudotime_the_iNKP_D16_D20.R
     plot_the_iNKP_D16_D20.R
     plot_pseudotime_the_iNKP_D16_D20.R
+    plot_NKP_features.R
 
 ## Analysis of hPSC-derived iNK isolated from different tissue of iNKP recipients
     Figure 2L-N
