@@ -1,3 +1,5 @@
+# Figure 2L, N: (L) UMAP plots showing the projections among UCB_activated NK, PB_activated NK, PSC_iNK, UCB_resting NK, PB_resting NK, and PB_CD19CAR-R4iNK, BM_CD19CAR-R4iNK, Liver_CD19CAR-R4iNK, Lung_CD19CAR-R4iNK, and Spleen_CD19CAR-R4iNK. Each tissue-derived iNK cell (CD45+CD56+ ) was obtained from the B-NDG hIL15 recipients 21 days after infusion of CD19CAR-R4iNKP cells, respectively.
+## (N) Violin plots of gene expression levels of CD56-encoding NCAM1, CD16-encoding FCGR3A, NKp46-encoding NCR1, NKp30-encoding NCR3, NKG2D-encoding KLRK1, CD69, NKG2C-encoding KLRC2, NKG2E-encoding KLRC3, CD319-encoding SLAMF7, CD244, CD226, CD161-encoding KLRB1, NKG2A-encoding KLRC1, CD94-encoding KLRD1, CD96, GZMB, perforin-encoding PRF1, GNLY, CD178-encoding FASLG, and IL2-RB.
 # library packages
 
 library(ggplot2)
@@ -160,3 +162,4 @@ p=plot_grid(
 p & theme_bw()
 
 saveRDS(NK_iNK_integ,file = "./WT_tr_iNK_integ_umap.rds")
+
