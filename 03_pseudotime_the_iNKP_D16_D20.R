@@ -1,4 +1,5 @@
 # pesudo-times analysis  
+## Figure 1C
 ## library packages
 library(dplyr)
 library(Seurat)
@@ -93,4 +94,6 @@ CD45_CD34_imNK.cds@principal_graph_aux@listData$UMAP$root_pr_nodes
 
 saveRDS(CD45_CD34_imNK.cds,file = "./pesud_CD45_CD34_imNK_1013.rds")
 #The code for plotting pseudo-time of iNKP lineage cells:
+## Figure 1C: (C) pseudo-time analysis of other-iHPC, e-iNKP, l-iNKP, and im-iNK. 
 ## plot pseudotime_the_iNKP_D16_D20.R
+
