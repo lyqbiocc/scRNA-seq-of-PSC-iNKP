@@ -8,15 +8,18 @@ The scRNA-seq data of UCB_resting NK cells, PSC-derived cells from day 16-20 org
 # scRNA seq analysis of hPSC derived iNKP and iNK cells
 
 ## Analysis of all the GFP negative cells of the hPSC-derived organoids from day 16, 17, 18, 19 and 20
+    Figure S1A-B
     01_Identify_the_cellpopulation_D16_D20.R
     plot_the_cellpopulation_D16_D20.R
 
 ## Locate the iNKP-like cells and identify iNK lineage cells 
+    Figure 1B-C
     02_Identify_the_iNKP_D16_D20.R
     03_pseudotime_the_iNKP_D16_D20.R
     plot_the_iNKP_D16_D20.R
     plot_pseudotime_the_iNKP_D16_D20.R
 
 ## Analysis of hPSC-derived iNK isolated from different tissue of iNKP recipients
+    Figure 2L-N
     04_analysis_iNKP_derived_iNK_invivo.R
     05_correlation_analysis.R
